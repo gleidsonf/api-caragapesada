@@ -25,6 +25,10 @@ You can also run your app inside IEx (Interactive Elixir) as:
 
     $ iex -S mix phx.server
 
+Run the IEx console with:
+
+    $ iex -S mix
+
 
 ## Learn more
 
@@ -33,3 +37,9 @@ You can also run your app inside IEx (Interactive Elixir) as:
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Using phx.gen
+
+The phx.gen.json command can be broken down as:
+
+phx.gen.json [Context] [Schema Name] [plural schema name = db table name] [database field:data type]
