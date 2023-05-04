@@ -7,7 +7,7 @@ defmodule Api.Vehicle do
     field :consumption, :float
     field :license_plate, :string
     field :model, :string
-    belongs_to :driver, Api.Driver, foreign_key: :driver_id
+    belongs_to :driver, Api.Driver
 
     timestamps()
   end
