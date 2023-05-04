@@ -7,6 +7,7 @@ defmodule Api.Driver do
     field :name, :string
     field :password, :string
     field :picture, :string
+    has_one :vehicle, Api.Vehicle, :vehicle_id
 
     timestamps()
   end
