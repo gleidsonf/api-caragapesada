@@ -6,7 +6,7 @@ defmodule Api.Repo.Migrations.CreateDrivers do
       add :name, :string
       add :email, :string
       add :password, :string
-      add :picture, :string
+      add :picture, :string, null: true
 
       timestamps()
     end
