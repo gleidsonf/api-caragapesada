@@ -8,6 +8,7 @@ defmodule Api.Vehicle do
     field :license_plate, :string
     field :model, :string
     belongs_to :driver, Api.Driver
+    has_many :packages, Api.Package
 
     timestamps()
   end

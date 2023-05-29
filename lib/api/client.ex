@@ -6,6 +6,7 @@ defmodule Api.Client do
     field :address, :string
     field :email, :string
     field :name, :string
+    has_many :packages, Api.Package
 
     timestamps()
   end
