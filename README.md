@@ -13,13 +13,30 @@ We are almost there! The following steps are missing:
 
     $ cd api
 
+Build the docker container:
+
+    $ docker compose build app
+
+
+Create the database:
+    
+    $ docker compose db ash
+    $ psql -h db -U postgres
+    (password: postgres)
+    $ CREATE DATABASE cargapesada;
+
 Then configure your database in config/dev.exs and run:
 
+    $ docker compose run app ash
     $ mix ecto.create
+
+Run the database migrations:
+
+    $ mix ecto.migrate
 
 Start your Phoenix app with:
 
-    $ mix phx.server
+    $ docker compose up app
 
 You can also run your app inside IEx (Interactive Elixir) as:
 
@@ -29,6 +46,9 @@ Run the IEx console with:
 
     $ iex -S mix
 
+Visualize routes with:
+
+    $ mix phx.routes
 
 ## Learn more
 
