@@ -14,6 +14,7 @@ defmodule ApiWeb.Router do
     pipe_through :api
 
     resources "/admins", AdminController, only: [:create, :show]
+    resources "/drivers", DriverController, only: [:create, :show, :update, :delete, :index]
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
